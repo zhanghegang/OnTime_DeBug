@@ -58,6 +58,7 @@ public class LeadActivity extends BaseActivity<GetUserInfoPresenter> implements 
 
     @Override
     public void initView() {
+        setStatus(true);
 //        RefWatcher refWatcher = MyApp.getRefWatcher(this);
 //        refWatcher.watch(this);
         handler.postDelayed(runnable, 1000);

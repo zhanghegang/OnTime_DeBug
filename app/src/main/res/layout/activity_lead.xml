@@ -14,6 +14,7 @@ android:src="@drawable/welcom"
     android:id="@+id/iv_reg"
     />
     <ImageView
+        android:layout_marginTop="@dimen/x50"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:src="@drawable/logo"

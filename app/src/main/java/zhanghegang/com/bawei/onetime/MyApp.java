@@ -14,6 +14,7 @@ import com.igexin.sdk.PushReceiver;
 import com.mingle.skin.SkinConfig;
 import com.mingle.skin.SkinEnable;
 import com.mingle.skin.hepler.SkinHelper;
+import com.mob.MobApplication;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -25,7 +26,7 @@ import com.tencent.bugly.crashreport.CrashReport;
  * decription:开发
  */
 
-public class MyApp extends Application {
+public class MyApp extends MobApplication {
     public static Context app;
     private RefWatcher install;
 

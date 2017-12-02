@@ -28,6 +28,11 @@ android {
         }
     }
 }
+repositories{
+    flatDir{
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -80,4 +85,8 @@ dependencies {
     compile 'com.jcodecraeer:xrecyclerview:1.3.2'
     implementation project(':multi-image-selector')
     compile 'com.xhb:xbanner:1.3.0'//xbanner配置
+    //手机号获取密码
+    compile name:'SMSSDK-3.0.0',ext:'aar'
+    compile name:'SMSSDKGUI-3.0.0',ext:'aar'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
 }

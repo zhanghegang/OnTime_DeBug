@@ -74,6 +74,7 @@ public class OtherRegActivity extends BaseActivity<LoginPresenter> implements Lo
                 reghost();
                 break;
             case R.id.tv_forget_pass:
+                start(ForgetPassActivity.class,false);
                 break;
             case R.id.tv_auto_reg:
                 start(MainActivity.class,false);

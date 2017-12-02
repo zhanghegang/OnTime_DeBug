@@ -3,6 +3,7 @@ package zhanghegang.com.bawei.onetime;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -13,6 +14,9 @@ import android.widget.Toast;
 
 import com.kson.slidingmenu.SlidingMenu;
 import com.tencent.bugly.crashreport.biz.UserInfoBean;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -100,6 +104,38 @@ public class MainActivity extends BaseActivity<GetUserInfoPresenter> implements 
 //        });
 
     }
+    boolean flag=false;
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if(slidingMenu!=null&&slidingMenu.isMenuShowing())
+        {
+            slidingMenu.toggle();
+        }
+        else {
+
+            if(flag==false)
+            {
+                flag=true;
+                showToast( "请再次点击");
+                Timer timer=new Timer();
+                TimerTask timerTask=new TimerTask() {
+                    @Override
+                    public void run() {
+                        flag=false;
+                    }
+                };
+                timer.schedule(timerTask,2000);
+            }
+            else {
+                finish();
+            }
+
+
+        }
+        return false;
+    }
+
 
     @Override
     protected void onResume() {
