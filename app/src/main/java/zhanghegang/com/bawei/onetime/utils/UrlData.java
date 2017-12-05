@@ -21,6 +21,7 @@ import zhanghegang.com.bawei.onetime.bean.BaseReg;
 import zhanghegang.com.bawei.onetime.bean.RegBean;
 import zhanghegang.com.bawei.onetime.bean.StatinBean;
 import zhanghegang.com.bawei.onetime.bean.UserInfo;
+import zhanghegang.com.bawei.onetime.bean.VideosBean;
 
 /**
  * current package:zhanghegang.com.bawei.onetime.utils
@@ -47,6 +48,10 @@ public interface UrlData {
     Observable<ResponseBody> getRegin(@FieldMap Map<String,String> map);
 @POST("quarter/getAd")
     Observable<BanderBean> getBanner();
+@POST("quarter/getVideos")
+@FormUrlEncoded
+    Observable<VideosBean> getHot_look(@FieldMap Map<String,String> map);
+
 
 
 }

@@ -62,6 +62,7 @@ public class MainActivity extends BaseActivity<GetUserInfoPresenter> implements 
 //    FrameLayout flLeft;
 //    @BindView(R.id.dl_pager)
 //    NoDrawLayout dlPager;
+
     private SlidingMenu slidingMenu;
     private GetUserInfoPresenter getUserInfoPresenter;
 
@@ -117,7 +118,7 @@ public class MainActivity extends BaseActivity<GetUserInfoPresenter> implements 
             if(flag==false)
             {
                 flag=true;
-                showToast( "请再次点击");
+                showToast( "再次点击.退出一刻钟");
                 Timer timer=new Timer();
                 TimerTask timerTask=new TimerTask() {
                     @Override

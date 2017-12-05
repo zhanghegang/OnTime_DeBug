@@ -31,7 +31,7 @@ public class TuijianFragment extends BaseFragment {
 
     @BindView(R.id.tab_tuijian)
     TabLayout tabTuijian;
-    Unbinder unbinder;
+
 
     @Override
     public BasePresenter initPresenter() {
